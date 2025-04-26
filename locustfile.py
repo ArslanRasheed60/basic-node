@@ -18,7 +18,3 @@ class MyTestUser(HttpUser):
     @task
     def post_delayed_3s(self):
         self.client.post("/api/delayed-3s", json={"dummy": "waiting"})
-
-    @task
-    def post_delayed_6s(self):
-        self.client.post("/api/delayed-6s", json={"dummy": "waiting"})
